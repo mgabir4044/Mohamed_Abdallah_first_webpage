@@ -69,7 +69,7 @@ h1{
 }
 /* making the dotted border, cetered on page and uses grid so the childern can fit when the screen shrinks */
 .parent{
-  border: 2px dotted blue ;
+  border: 2px dotted rgb(0, 0, 0) ;
   border-radius: 16px;
   max-width: auto;
   margin-left:auto;

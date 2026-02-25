@@ -1,0 +1,99 @@
+/*apply box sizing to all elements so padding and borders do not make items overflow their containers*/
+*{
+  box-sizing: border-box;
+}
+/*page background and for steups*/
+body{
+  margin: 0;
+  font-family: "Time New Roman";
+  line-height: 1.5;
+  color: black;
+}
+.page{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+/* the intor header styling*/
+.intro{
+  padding: 20px;
+  border-radius: 25px;
+  background: lightblue;
+  border: 1px solid darkgray;
+}
+/*remove extra space from heading*/
+h1{
+  margin: 0 0 10px; 
+}
+
+/* gallery layout and the grid container */
+.gallery{
+  margin-top: 18px;
+  display: grid;
+  gap:16px /* the gap beteen items*/
+}
+/* make the first image cotainer style */
+.first-photo{
+  padding: 5px;
+  border-radius:16px;
+  background: lightgray;
+  height: auto;
+}
+
+/* make the second image responsive */
+.scound-photo img {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* make the third picture centered*/
+.third-photo img{
+  border-radius: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* spacing */
+.facts h2{
+  margin-top: 0;
+}
+.facts{
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 14px;
+  background: lightblue;
+  
+}
+/* making the dotted border, cetered on page and uses grid so the childern can fit when the screen shrinks */
+.parent{
+  border: 2px dotted blue ;
+  border-radius: 16px;
+  max-width: auto;
+  margin-left:auto;
+  margin-right: auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* spacing between child boxes*/
+  display: grid; /* grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) /* 1fr to take 1 part of the available space so they fit equaly in the box */
+}
+/* child boxes background, border and runded coners */
+.child{
+  background-color: lightblue;
+  border: 3px solid black;
+  border-radius: 16px;
+  margin: auto;
+  padding: 16px;
+  flex: 1 1 250px; /* to make the boxes flexible within the grid */
+}
+/* making the images resize inside the grid boxes */
+.child img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
